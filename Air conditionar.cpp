@@ -10,11 +10,16 @@ using namespace std;
 
 int main() {
     int T;
+    
+    cout<<"Enter the number of Cases:"<<endl;
     cin >> T;
+    
     for (int i = 1; i <= T; i++) {
 
         int a, b, c, x;
+        cout<<"Enter the required by A,B,C respctively"<<endl;
         cin >> a >> b >> c;
+        
         if (a > c) {
             x = a;
         } else {
@@ -24,11 +29,11 @@ int main() {
                 i=x;
           
             if (i < b) {
-                cout << "Yes" << endl;
+                cout << "Yes Temperature can be adjusted" << endl;
             } else if(i > b){
-                cout << "No" << endl;
+                cout << "No Temperature can't be adjusted" << endl;
             }else if(i=b){
-                cout<<"Yes"<<endl;
+                cout<<"Yes Temperature can be adjusted"<<endl;
             }
         }
     }
