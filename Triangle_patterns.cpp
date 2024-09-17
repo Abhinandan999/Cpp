@@ -60,20 +60,42 @@ for(int i=0;i<n;i++){
 }
 cout<<endl;
 
-cout<<endl;
-cout<<"For same Alphabet"<<endl;
-cout<<endl;
 
-char ch='A';
+cout<<"Same numbers(column wise):- "<<endl;
 
-for(char i='a';i<n;i++){
-    for(char j=0;j<i+1;j++){
-
-     cout<<(i+1)<<" ";
-    
+for(int i=1;i<=n;i++){
+    for(int j=1;j<(i+1);j++){
+        cout<<j<<" ";
     }
     cout<<endl;
 }
 cout<<endl;
+
+cout<<"Same column series(Reverse Triangle):- "<<endl;
+
+for(int i=1;i<=n;i++){
+
+    for(int j=i+1;j>0;j--){
+            cout<<j<<" ";
+    }
+    cout<<endl;
+}
+cout<<endl;
+
+
+cout<<"Floyd's Triangle pattern :- "<<endl;
+
+int num2=1;
+
+for(int i=1;i<=n;i++){
+
+    for(int j=1;j<i+1;j++){
+            cout<<num2<<" ";
+            num2++;
+    }
+    cout<<endl;
+}
+cout<<endl;
+
 
 }
