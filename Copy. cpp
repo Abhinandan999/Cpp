@@ -1,0 +1,65 @@
+
+
+1. **Hello World**:
+   ```cpp
+   #include <iostream>
+   
+   int main() {
+       std::cout << "Hello, World!" << std::endl;
+       return 0;
+   }
+   ```
+
+2. **Simple Calculator**:
+   ```cpp
+   #include <iostream>
+   
+   int main() {
+       char operation;
+       float num1, num2;
+       
+       std::cout << "Enter operator (+, -, *, /): ";
+       std::cin >> operation;
+       std::cout << "Enter two numbers: ";
+       std::cin >> num1 >> num2;
+
+       switch (operation) {
+           case '+':
+               std::cout << num1 + num2;
+               break;
+           case '-':
+               std::cout << num1 - num2;
+               break;
+           case '*':
+               std::cout << num1 * num2;
+               break;
+           case '/':
+               if (num2 != 0)
+                   std::cout << num1 / num2;
+               else
+                   std::cout << "Division by zero!";
+               break;
+           default:
+               std::cout << "Invalid operator!";
+       }
+
+       return 0;
+   }
+   ```
+
+3. **Factorial of a Number**:
+   ```cpp
+   #include <iostream>
+   
+   int factorial(int n) {
+       return (n == 1 || n == 0) ? 1 : factorial(n - 1) * n;
+   }
+   
+   int main() {
+       int num;
+       std::cout << "Enter a number: ";
+       std::cin >> num;
+       std::cout << "Factorial of " << num << " is " << factorial(num) << std::endl;
+       return 0;
+   }
+   
