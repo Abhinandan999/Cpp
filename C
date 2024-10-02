@@ -1,0 +1,59 @@
+
+#include <iostream>
+#include <vector>
+#include <algorithm> // For std::sort
+
+// Define a custom class
+class Person {
+public:
+    std::string name;
+    int age;
+
+    // Constructor
+    Person(std::string n, int a) : name(n), age(a) {}
+
+    // Function to display person details
+    void display() const {
+        std::cout << "Name: " << name << ", Age: " << age << std::endl;
+    }
+};
+
+// Function to compare two persons by age
+bool compareByAge(const Person& a, const Person& b) {
+    return a.age < b.age; // Sort in ascending order of age
+}
+
+int main() {
+    // Create a vector of Person objects
+    std::vector<Person> people;
+
+    // Add some Person objects to the vector
+    people.emplace_back("Alice", 30);
+    people.emplace_back("Bob", 25);
+    people.emplace_back("Charlie", 35);
+    people.emplace_back("Diana", 20);
+
+    // Display the original list of people
+    std::cout << "Original list of people:" << std::endl;
+    for (const auto& person : people) {
+        person.display();
+    }
+
+    // Sort the vector by age using a custom comparator
+    std::sort(people.begin(), people.end(), compareByAge);
+
+    // Display the sorted list of people
+    std::cout << "\nSorted list of people by age:" << std::endl;
+    for (const auto& person : people) {
+        person.display();
+    }
+
+    return 0;
+}
+```
+
+### Explanation:
+
+1. **Custom Class**: A `Person` class is defined with attributes `name` and `age`, along with a constructor and a method to display the person's details.
+
+2. **Vector of Objects**: A vector named `people` is created to store `Person` objects. The `emplace_back` method is use
